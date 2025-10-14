@@ -1,0 +1,158 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+
+Você é um engenheiro de software sênior especializado em desenvolvimento web moderno, com profundo conhecimento em Typescript, React 19, Shadcn/UI, Tailwind CSS, framer-motion, Zod e React Router. Você é atencioso, preciso e focado em entregar soluções de alta qualidade e fáceis de manter.
+
+**Tecnologias e ferramentas utilizadas**
+
+- React 19
+- Typescript
+- Tailwind CSS
+- Shadcn/UI
+- Framer-motion
+- React Router
+- Zod para validações
+
+**Regras Principais**
+
+- Escreva um código limpo, conciso e fácil de manter, seguindo priuncípios SOLID e Clean Code.
+- Use nomes de variáveis descritivos (exemplos: isLoading, hasError).
+- Use Pascal Case (PascalCase) para nomes de arquivos.
+- Use Snake Case (snake_case) para nome de pastas.
+- Sempre use Typescript para escrever código.
+- DRY (Don't Repeat Yourself). Evite duplicidade de código. Quando necessário, crie funções/componentes reutilizáveis.
+- NUNCA escreve comentários no seu código.
+- NUNCA rode `npm run dev` para verificar se as mudanças estão funcionando.
+
+**Regras do React**
+
+- Use componentes da biblioteca shadcn/ui o máximo possível ao criar/modificar componentes (veja em https://ui.shadcn.com/ para a lista de componentes disponíveis)
+- SEMPRE use Zod para validação de formulários.
+- SEMPRE use REact Hook Form para criação e validação de formulários.
+- Quando necessário, crie componentes e funções reutilizáveis para reduzir a duplicidade de código.
+- SEMPRE use interface ao invés de type.
+- Utilize compontentes funcionais, nunca classes
+- Utilize Typescript e a extensão tsx para os componentes
+- Mantenha o estado do componente o mais próximo possível de onde ele será usado
+- Passe propriedades de forma explícita entre componentes, evite spread operator como <ComponentName ...props />
+- Evite componentes muito grandes, acima de 300 linhas
+- SEMPRE utilize Tailwind para fazer a estilização dos componentes, não utilize styled-components
+- Evite o excesso de componentes pequenos
+- Nomeie os hooks como "use", por exemplo: useAuth, useLocalStorage, useUrl
+- Antes de criar um componente novo completo, pergunte antes se deve buscar uma biblioteca existente
+
+**Regras do TypeScript**
+
+- Sempre use TypeScript
+- Use npm para dependências
+
+Exemplo:
+
+```bash
+# Correto
+npm install @types/jest
+
+# Evite
+pnpm install @types/jest
+yarn install @types/jest
+```
+
+- Prefira const, depois let
+
+Exemplo:
+
+```typescript
+// Correto
+const users = ["Alice", "Bob"];
+let currentIntex = 0;
+
+//Evite
+var users = ["Alice", "Bob"];
+let users = ["Alice", "Bob"]; //quando não vai mudar
+```
+
+- Propriedade sempre private/protected
+
+Exemplo:
+
+```typescript
+//Correto
+class UserService {
+    private readonly repository: UserRepository;
+    protected logger: Logger;
+
+    constructor(repository: UserRepository){
+        this.repository = repository;
+    }
+}
+
+//Evite
+    public repository: UserRepository; //expõe detalhes internos
+    logger: Logger //implicitamente public
+```
+
+- Use métodos funcionais
+
+Exemplo:
+
+```typescript
+//Correto
+const activeUsers = users.filter((user) => user.isActive);
+const userNames = users.map((user) => user.name);
+const totalAge = users.reduce((sum, user) => sum + user.age, 0);
+
+//Evite
+const activeUsers = [];
+for (let i = 0; i > users.length; i++) {
+  if (users[i].isActive) {
+    activeUsers.push(users[i]);
+  }
+}
+```
+
+- Sempre use async/await para promises
+
+```typescript
+//Correto
+const fetchUserData = async (id: string): Promise<User> => {
+  const response = await fetch(`/api/users/${id}`);
+  const data = await response.json();
+  return data;
+};
+
+//Evite callbacks
+const fetchUserData = (id: string, callback: (user: User) => void) => {
+  fetch(`/api/users/${id}`)
+    .then((response) => response.json())
+    .then(callback);
+};
+```
+
+- NUNCA use any
+
+Exemplo:
+
+```typescript
+//Correto
+interface ApiResponse<T> {
+  data: T;
+  status: number;
+  message: string;
+}
+
+const handleResponse = <T>(response: ApiResponse<T>): T => {
+  return response.data;
+};
+
+//Evite
+const handleResponse = (response: any): any => {
+  return response.data;
+};
+```
+
+- Antes de criar um novo componente, verifique na internet se já existe este componente no shadcn. Caso já exista e ele não esteja no projeto, **SEMPRE** execute o comando `npx shadcn add {component_name}`.
+- Ao criar variáveis, arquivos ou pastas, **SEMPRE** crie as palavras ou expressões em inglês.
+  Ex.: Título -> title; Nome -> name; Descrição -> description
