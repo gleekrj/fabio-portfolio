@@ -50,11 +50,31 @@ export const Home = () => {
                 Fábio Matos
               </span>
             </h1>
-            <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Depois de 15 anos traduzindo necessidades em soluções, encontrei
-              na programação a forma mais direta de construir o que antes eu
-              apenas descrevia — com propósito e sem complicar o que pode ser
-              simples.
+            <p className="text-2xl sm:text-3xl font-semibold text-gray-700 dark:text-gray-200 max-w-3xl mx-auto leading-relaxed">
+              <p>
+                Depois de 15 anos traduzindo necessidades em soluções, encontrei
+                na
+                <span className="text-orange-500 dark:text-orange-400">
+                  {" "}
+                  programação{" "}
+                </span>
+                a forma mais direta de
+                <span className="text-orange-500 dark:text-orange-400">
+                  {" "}
+                  construir{" "}
+                </span>
+                o que antes eu apenas descrevia — com
+                <span className="text-orange-500 dark:text-orange-400">
+                  {" "}
+                  propósito{" "}
+                </span>
+                e sem complicar o que pode ser
+                <span className="text-orange-500 dark:text-orange-400">
+                  {" "}
+                  simples
+                </span>
+                .
+              </p>
             </p>
           </motion.div>
         </div>
@@ -77,14 +97,14 @@ export const Home = () => {
             </motion.h2>
             <motion.div
               variants={containerVariants}
-              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
+              className="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-4"
             >
               {technologies.map((tech) => (
                 <motion.div key={tech.name} variants={itemVariants}>
-                  <Card className="h-32 flex flex-col items-center justify-center p-4 hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600">
+                  <Card className="h-20 flex flex-col items-center justify-center p-2 hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600">
                     <CardContent className="flex flex-col items-center justify-center h-full p-0">
-                      <tech.icon className="h-8 w-8 text-orange-500 dark:text-orange-400 mb-2" />
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">
+                      <tech.icon className="h-6 w-6 text-orange-500 dark:text-orange-400 mb-1" />
+                      <span className="text-xs font-medium text-gray-700 dark:text-gray-300 text-center">
                         {tech.name}
                       </span>
                     </CardContent>
