@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
+import avatar from "@/assets/avatar.png";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -62,12 +63,18 @@ Se você está montando um time que valoriza pessoas que aprendem rápido, que s
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
-                <Card className="w-80 h-80 overflow-hidden bg-gradient-to-br from-blue-500 to-orange-500 border-0">
-                  <CardContent className="p-0 h-full flex items-center justify-center">
+                <Card className="w-80 overflow-hidden bg-gradient-to-br from-blue-500 to-orange-500 border-0">
+                  <CardContent className="p-6 flex flex-col items-center justify-center">
+                    <div className="w-56 h-56 rounded-full overflow-hidden mb-6 border-4 border-white shadow-xl bg-gradient-to-br from-orange-500 to-blue-500">
+                      <img
+                        src={avatar}
+                        alt="Fábio Matos"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                     <div className="text-center text-white">
-                      <div className="text-8xl font-bold mb-4">FM</div>
-                      <div className="text-xl opacity-90">Fábio Matos</div>
-                      <div className="text-sm opacity-75 mt-2">
+                      <div className="text-xl font-bold mb-2">Fábio Matos</div>
+                      <div className="text-sm opacity-90">
                         Desenvolvedor Fullstack
                       </div>
                     </div>
