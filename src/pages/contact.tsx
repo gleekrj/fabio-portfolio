@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Linkedin, Instagram, Send } from "lucide-react";
+import { Github, Linkedin, Instagram, Send } from "lucide-react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -27,11 +27,11 @@ const itemVariants = {
 export const Contact = () => {
   const contactInfo = [
     {
-      icon: Mail,
-      title: "E-mail",
-      value: "fabio.henrique.ss.matos@gmail.com",
-      link: "mailto:fabio.henrique.ss.matos@gmail.com",
-      description: "Entre em contato por e-mail",
+      icon: Github,
+      title: "Github",
+      value: "@gleekrj",
+      link: "https://github.com/gleekrj",
+      description: "Confira meus projetos no Github",
     },
     {
       icon: Linkedin,
@@ -120,7 +120,10 @@ export const Contact = () => {
                     você tem um projeto interessante ou uma vaga que combine com
                     meu perfil, não hesite em entrar em contato!
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <div className="flex flex-col gap-4 items-center">
+                    <p className="text-2xl font-semibold text-orange-500 dark:text-orange-400">
+                      fabio.henrique.ss.matos@gmail.com
+                    </p>
                     <Button
                       asChild
                       size="lg"
@@ -129,16 +132,6 @@ export const Contact = () => {
                       <a href="mailto:fabio.henrique.ss.matos@gmail.com">
                         <Send className="h-5 w-5 mr-2" />
                         Enviar E-mail
-                      </a>
-                    </Button>
-                    <Button asChild variant="outline" size="lg">
-                      <a
-                        href="https://linkedin.com/in/fabio-matos"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Linkedin className="h-5 w-5 mr-2" />
-                        LinkedIn
                       </a>
                     </Button>
                   </div>
