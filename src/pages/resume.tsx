@@ -46,10 +46,6 @@ export const Resume = () => {
               <MapPin className="h-5 w-5 mr-2" />
               <span>Rio de Janeiro, Brasil</span>
             </div>
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white">
-              <Download className="h-4 w-4 mr-2" />
-              Baixar CV
-            </Button>
           </motion.div>
 
           {/* Summary */}
@@ -62,13 +58,104 @@ export const Resume = () => {
               </CardHeader>
               <CardContent>
                 <div className="prose prose-gray dark:prose-invert max-w-none">
-                  {resumeData.summary.split("\n\n").map((paragraph, index) => (
+                  {resumeData.summary.map((paragraph, paragraphIndex) => (
                     <p
-                      key={index}
+                      key={paragraphIndex}
                       className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4"
                     >
-                      {paragraph}
+                      {paragraph.map((segment, segmentIndex) =>
+                        segment.bold ? (
+                          <strong key={segmentIndex}>{segment.text}</strong>
+                        ) : (
+                          <span key={segmentIndex}>{segment.text}</span>
+                        )
+                      )}
                     </p>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          {/* Dev Experience */}
+          <motion.div variants={itemVariants} className="mb-12">
+            <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600">
+              <CardHeader>
+                <CardTitle className="text-2xl text-gray-900 dark:text-white">
+                  Experiência em Desenvolvimento
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-6">
+                  {resumeData.DevExperience.map((exp, index) => (
+                    <div
+                      key={index}
+                      className="border-l-4 border-orange-500 pl-6"
+                    >
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                        {exp.title}
+                      </h3>
+                      <p className="text-orange-500 dark:text-orange-400 font-medium">
+                        {exp.company}
+                      </p>
+                      <p className="text-gray-500 dark:text-gray-400 text-sm mb-3">
+                        {exp.period}
+                      </p>
+                      <ul className="space-y-1">
+                        {exp.description.map((desc, descIndex) => (
+                          <li
+                            key={descIndex}
+                            className="text-gray-600 dark:text-gray-300 flex items-start"
+                          >
+                            <span className="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                            {desc}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          {/* Other Experience */}
+
+          <motion.div variants={itemVariants} className="mb-12">
+            <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600">
+              <CardHeader>
+                <CardTitle className="text-2xl text-gray-900 dark:text-white">
+                  Experiência em Outras Áreas
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-6">
+                  {resumeData.OtherExperience.map((exp, index) => (
+                    <div
+                      key={index}
+                      className="border-l-4 border-orange-500 pl-6"
+                    >
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                        {exp.title}
+                      </h3>
+                      <p className="text-orange-500 dark:text-orange-400 font-medium">
+                        {exp.company}
+                      </p>
+                      <p className="text-gray-500 dark:text-gray-400 text-sm mb-3">
+                        {exp.period}
+                      </p>
+                      <ul className="space-y-1">
+                        {exp.description.map((desc, descIndex) => (
+                          <li
+                            key={descIndex}
+                            className="text-gray-600 dark:text-gray-300 flex items-start"
+                          >
+                            <span className="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                            {desc}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   ))}
                 </div>
               </CardContent>
@@ -110,61 +197,19 @@ export const Resume = () => {
             </Card>
           </motion.div>
 
-          {/* Experience */}
-          <motion.div variants={itemVariants} className="mb-12">
-            <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600">
-              <CardHeader>
-                <CardTitle className="text-2xl text-gray-900 dark:text-white">
-                  Experiência em Desenvolvimento
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-6">
-                  {resumeData.experience.map((exp, index) => (
-                    <div
-                      key={index}
-                      className="border-l-4 border-orange-500 pl-6"
-                    >
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                        {exp.title}
-                      </h3>
-                      <p className="text-orange-500 dark:text-orange-400 font-medium">
-                        {exp.company}
-                      </p>
-                      <p className="text-gray-500 dark:text-gray-400 text-sm mb-3">
-                        {exp.period}
-                      </p>
-                      <ul className="space-y-1">
-                        {exp.description.map((desc, descIndex) => (
-                          <li
-                            key={descIndex}
-                            className="text-gray-600 dark:text-gray-300 flex items-start"
-                          >
-                            <span className="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
-                            {desc}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-
           {/* Education */}
           <motion.div variants={itemVariants} className="mb-12">
             <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600">
               <CardHeader>
                 <CardTitle className="text-2xl text-gray-900 dark:text-white">
-                  Formação Acadêmica & Certificações
+                  Formação Acadêmica, Certificações e Cursos
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                      Educação
+                      Formação Acadêmica
                     </h3>
                     <div className="space-y-4">
                       {resumeData.education.map((edu, index) => (
@@ -187,7 +232,7 @@ export const Resume = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                      Certificações
+                      Certificações e Cursos
                     </h3>
                     <ul className="space-y-2">
                       {resumeData.certifications.map((cert, index) => (
@@ -204,6 +249,20 @@ export const Resume = () => {
                 </div>
               </CardContent>
             </Card>
+            <div className="flex justify-center mt-8">
+              <Button
+                asChild
+                className="bg-orange-500 hover:bg-orange-600 text-white"
+              >
+                <a
+                  href="http://github.com/gleekrj/portfolio-files/raw/main/FabioMatos_Curriculo.pdf"
+                  download
+                >
+                  <Download className="h-4 w-4 mr-2" />
+                  Baixar CV
+                </a>
+              </Button>
+            </div>
           </motion.div>
         </motion.div>
       </div>

@@ -1,6 +1,11 @@
+interface TextSegment {
+    text: string;
+    bold?: boolean;
+}
+
 export interface ResumeData {
     title: string;
-    summary: string;
+    summary: TextSegment[][];
     skills: {
         frontend: string[];
         backend: string[];
@@ -10,7 +15,13 @@ export interface ResumeData {
         database: string[];
         languages: string[];
     };
-    experience: {
+    DevExperience: {
+        title: string;
+        company: string;
+        period: string;
+        description: string[];
+    }[];
+    OtherExperience: {
         title: string;
         company: string;
         period: string;
@@ -25,60 +36,89 @@ export interface ResumeData {
 }
 
 export const resumeData: ResumeData = {
-    title: "Sou um Desenvolvedor Fullstack e me encontro atualmente no Rio de Janeiro, Brasil",
-    summary: "Desenvolvedor Fullstack Júnior com experiência prática em projetos voluntários utilizando React.js, Next.js, Node.js, React Native e Java. Inglês fluente. Forte capacidade de aprendizado, atenção à qualidade do código e experiência colaborativa em times ágeis.\n\nMais de 15 anos de atuação em TI, incluindo papéis de Agile Master, Product Owner e Analista de Requisitos, que fortalecem minha comunicação técnica, visão de produto e entrega de valor — diferenciais aplicados hoje à minha carreira em desenvolvimento de software.",
+    title: "Desenvolvedor Fullstack, transformando ideias em soluções — do Rio de Janeiro para o mundo.",
+    summary: [
+        [
+            { text: "Desenvolvedor Fullstack Júnior com experiência prática em " },
+            { text: "React.js, Node.js, React Native e Java", bold: true },
+            { text: ", atuando em projetos voluntários e pessoais que envolvem " },
+            { text: "interfaces responsivas, APIs REST e integrações entre front e backend", bold: true },
+            { text: "." }
+        ],
+        [
+            { text: "Com mais de " },
+            { text: "15 anos de vivência em projetos de TI e times ágeis", bold: true },
+            { text: ", trago uma base sólida em " },
+            { text: "análise de sistemas, comunicação técnica e entrega de valor", bold: true },
+            { text: ", aliando experiência corporativa à prática de desenvolvimento." }
+        ],
+        [
+            { text: "Tenho facilidade em aprender novas tecnologias, aplicar " },
+            { text: "boas práticas de código", bold: true },
+            { text: ", trabalhar em equipe e buscar " },
+            { text: "soluções simples, funcionais e escaláveis", bold: true },
+            { text: "." }
+        ],
+        [
+            { text: "Inglês fluente", bold: true },
+            { text: "." }
+        ]
+    ],
     skills: {
         frontend: ["React.js", "Next.js", "JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "Tailwind CSS"],
-        backend: ["Node.js", "Express", "REST APIs", "Java (OOP, Spring Boot básico)"],
+        backend: ["Node.js", "Express", "REST APIs", "Java"],
         mobile: ["React Native"],
         testing: ["Jest (básico)", "JUnit (conceitos)", "MVC", "microsserviços (conceitos)", "cache (em estudo)"],
         devops: ["Git/GitHub", "CI/CD (GitHub Actions, Jenkins básico)", "deploy em Vercel/Heroku"],
         database: ["SQL Server", "Oracle", "PostgreSQL", "MySQL", "MongoDB (básico)"],
-        languages: ["Português (nativo)", "Inglês/English (Avançado - B2)"]
+        languages: ["Inglês/English (Avançado - B2)", "Português (nativo)", "Espanhol (básico)"]
     },
-    experience: [
+    DevExperience: [
         {
             title: "Fullstack Developer (Voluntário)",
-            company: "Pipoca Ágil – Plataforma de Turismo Sustentável",
-            period: "Jul/2025 – Presente",
+            company: "Pipoca Ágil - Plataforma de Turismo Sustentável",
+            period: "Jul/2025 - Presente",
             description: [
-                "Desenvolvimento frontend (React.js + TypeScript) e APIs REST em Node.js.",
-                "Deploy inicial em ambiente cloud e integração contínua com GitHub."
+                "Desenvolvimento de componentes front-end interativos e APIs de integração",
+                "Implementação de funcionalidades com persistência de dados e versionamento no Git.",
+                "Colaboração em equipe multidisciplinar, revisão de código e deploy em ambiente de produção."
             ]
         },
         {
             title: "Fullstack Developer (Voluntário)",
-            company: "Pipoca Ágil – Aplicativo Saúde",
-            period: "Ago/2024 – Out/2024",
+            company: "Pipoca Ágil - Aplicativo Saúde",
+            period: "Ago/2024 - Out/2024",
             description: [
-                "Criação de telas em React Native e consumo de APIs REST.",
-                "Integração com backend Node.js e otimização de performance."
+                "Desenvolvimento de telas e fluxos de usuário em React Native, consumo de APIs REST e tratamento de dados locais.",
+                "Apoio à integração com backend e melhorias de performance no app."
+            ]
+        }],
+    OtherExperience: [
+        {
+            title: "Analista de Sistemas / Agile Master",
+            company: "Ideale Tech",
+            period: "Out/2024 - Ago/2025",
+            description: [
+                "Atuação com equipes técnicas em clientes como Unimed GO, Ipiranga e Vivest, integrando práticas ágeis e visão de produto.",
+                "Colaboração direta com desenvolvedores, ampliando repertório técnico e entendimento de arquitetura de sistemas."
             ]
         },
         {
             title: "Agile Master",
-            company: "Ideale.io",
-            period: "2024–2025",
+            company: "Dinsmore Compass (Cliente B3)",
+            period: "Mar/2022 - Jul/2023",
             description: [
-                "Liderança ágil em clientes como Unimed GO e Ipiranga.",
-                "Colaboração direta com equipes de desenvolvimento, reforçando práticas técnicas."
+                "Apoio técnico a times de desenvolvimento na adoção de práticas BDD e melhoria de entregas.",
+                "Experiência próxima a DEVs reforçando entendimento de pipelines, automação e métricas de performance."
             ]
         },
         {
             title: "Agile Master",
-            company: "Dinsmore Compass – Cliente B3",
-            period: "2022–2023",
+            company: "Alterdata Software",
+            period: "Out/2021 - Jan/2022",
             description: [
-                "Adoção de BDD e melhoria de cadência de entregas.",
-                "Contato próximo com equipes técnicas."
-            ]
-        },
-        {
-            title: "Agile Master",
-            company: "Alterdata",
-            period: "2021–2022",
-            description: [
-                "Introdução de métricas e melhoria de performance em squads de desenvolvimento."
+                "Acompanhamento de squads de desenvolvimento e melhoria de processos.",
+                "Aplicação de métricas ágeis e suporte técnico ao ciclo de entrega contínua."
             ]
         }
     ],
@@ -86,17 +126,21 @@ export const resumeData: ResumeData = {
         {
             degree: "Bacharel em Informática",
             institution: "Estácio de Sá",
-            year: "06/2005"
+            year: "01/2001 - 06/2005"
         },
         {
-            degree: "MBA – Governança, Projetos e Sistemas de TI",
-            institution: "UFRJ",
-            year: "06/2015"
+            degree: "MBA - Governança, Projetos e Sistemas de TI",
+            institution: "Escola Politécnica da UFRJ",
+            year: "01/2014 - 06/2015"
         }
     ],
     certifications: [
-        "PSM (Professional Scrum Master)",
+        "Professional Scrum Master (PSM I - Scrum.org)",
         "Certified Scrum Product Owner (CSPO - Scrum Alliance)",
-        "Kanban (KMP1/KMP2)"
+        "Kanban System Design (KSD/KMP1 - Kanban University)",
+        "Kanban Systems Improvement (KSI / KMP2 - Kanban University)",
+        "Bootcamp - E-commerce com React e Node.js (Full Stack Club)",
+        "React 18 Intermediate Topics (Code With Mosh)",
+        "Java OOP - Formação Aprenda a Programar com Orientação a Objetos (Alura)",
     ]
 };
