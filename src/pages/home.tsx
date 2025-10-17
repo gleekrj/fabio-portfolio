@@ -8,7 +8,14 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { ExternalLink, Github, Calendar, Play } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Globe, Github, Calendar, Play, Expand } from "lucide-react";
 import { technologies } from "@/data/technologies";
 import { projects } from "@/data/projects";
 
@@ -51,30 +58,28 @@ export const Home = () => {
               </span>
             </h1>
             <p className="text-2xl sm:text-3xl font-semibold text-gray-700 dark:text-gray-200 max-w-3xl mx-auto leading-relaxed">
-              <p>
-                Depois de 15 anos traduzindo necessidades em soluções, encontrei
-                na
-                <span className="text-orange-500 dark:text-orange-400">
-                  {" "}
-                  programação{" "}
-                </span>
-                a forma mais direta de
-                <span className="text-orange-500 dark:text-orange-400">
-                  {" "}
-                  construir{" "}
-                </span>
-                o que antes eu apenas descrevia — com
-                <span className="text-orange-500 dark:text-orange-400">
-                  {" "}
-                  propósito{" "}
-                </span>
-                e sem complicar o que pode ser
-                <span className="text-orange-500 dark:text-orange-400">
-                  {" "}
-                  simples
-                </span>
-                .
-              </p>
+              Depois de 15 anos traduzindo necessidades em soluções, encontrei
+              na
+              <span className="text-orange-500 dark:text-orange-400">
+                {" "}
+                programação{" "}
+              </span>
+              a forma mais direta de
+              <span className="text-orange-500 dark:text-orange-400">
+                {" "}
+                construir{" "}
+              </span>
+              o que antes eu apenas descrevia — com
+              <span className="text-orange-500 dark:text-orange-400">
+                {" "}
+                propósito{" "}
+              </span>
+              e sem complicar o que pode ser
+              <span className="text-orange-500 dark:text-orange-400">
+                {" "}
+                simples
+              </span>
+              .
             </p>
           </motion.div>
         </div>
@@ -138,13 +143,22 @@ export const Home = () => {
               {projects.map((project) => (
                 <motion.div key={project.title} variants={itemVariants}>
                   <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600">
-                    <div className="aspect-video bg-gradient-to-br from-blue-500 to-orange-500 flex items-center justify-center">
-                      <div className="text-white text-center">
-                        <div className="text-4xl font-bold mb-2">FM</div>
-                        <div className="text-sm opacity-90">
-                          {project.title}
+                    <div className="aspect-video overflow-hidden bg-gradient-to-br from-blue-500 to-orange-500 flex items-center justify-center relative">
+                      {project.images[0] &&
+                      project.images[0].startsWith("http") ? (
+                        <img
+                          src={project.images[0]}
+                          alt={project.title}
+                          className="w-full h-full object-cover absolute inset-0"
+                        />
+                      ) : (
+                        <div className="text-white text-center">
+                          <div className="text-4xl font-bold mb-2">FM</div>
+                          <div className="text-sm opacity-90">
+                            {project.title}
+                          </div>
                         </div>
-                      </div>
+                      )}
                     </div>
                     <CardContent className="p-6">
                       <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
@@ -178,29 +192,56 @@ export const Home = () => {
                             <Button
                               variant="outline"
                               size="sm"
-                              className="flex-1"
+                              className="flex-1 cursor-pointer"
                             >
                               <Play className="h-4 w-4 mr-2" />
                               Ver Detalhes
                             </Button>
                           </DialogTrigger>
-                          <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+                          <DialogContent
+                            className="max-w-4xl max-h-[90vh] overflow-y-auto p-4 sm:p-6"
+                            aria-describedby={undefined}
+                          >
                             <DialogHeader>
                               <DialogTitle className="text-2xl font-bold text-gray-900 dark:text-white">
                                 {project.title}
                               </DialogTitle>
                             </DialogHeader>
                             <div className="space-y-4">
-                              <div className="aspect-video bg-gradient-to-br from-blue-500 to-orange-500 rounded-lg flex items-center justify-center">
-                                <div className="text-white text-center">
-                                  <div className="text-6xl font-bold mb-2">
-                                    FM
-                                  </div>
-                                  <div className="text-lg opacity-90">
-                                    {project.title}
-                                  </div>
-                                </div>
-                              </div>
+                              {project.videoUrl && (
+                                <Dialog modal={false}>
+                                  <DialogTrigger asChild>
+                                    <div className="relative aspect-video rounded-lg overflow-hidden bg-black cursor-pointer group">
+                                      <video
+                                        src={project.videoUrl}
+                                        controls
+                                        className="w-full h-full"
+                                      >
+                                        Seu navegador não suporta vídeos.
+                                      </video>
+                                      <div className="absolute top-2 right-2 bg-black/50 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <Expand className="h-4 w-4 text-white" />
+                                      </div>
+                                    </div>
+                                  </DialogTrigger>
+                                  <DialogContent
+                                    className="!max-w-[95vw] !w-[95vw] sm:!max-w-[60vw] sm:!w-[60vw] max-h-[95vh] p-2"
+                                    aria-describedby={undefined}
+                                  >
+                                    <DialogTitle className="sr-only">
+                                      Vídeo do projeto {project.title}
+                                    </DialogTitle>
+                                    <video
+                                      src={project.videoUrl}
+                                      controls
+                                      autoPlay
+                                      className="w-full h-full rounded-lg"
+                                    >
+                                      Seu navegador não suporta vídeos.
+                                    </video>
+                                  </DialogContent>
+                                </Dialog>
+                              )}
                               <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
                                 <Calendar className="h-4 w-4 mr-2" />
                                 Lançado em {project.launchDate}
@@ -218,19 +259,64 @@ export const Home = () => {
                                   </span>
                                 ))}
                               </div>
+                              <div className="relative px-12">
+                                <Carousel className="w-full">
+                                  <CarouselContent>
+                                    {project.images.map((image, index) => (
+                                      <CarouselItem key={index}>
+                                        <Dialog modal={false}>
+                                          <DialogTrigger asChild>
+                                            <div className="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-blue-500 to-orange-500 flex items-center justify-center relative cursor-pointer group">
+                                              {image.startsWith("http") ? (
+                                                <>
+                                                  <img
+                                                    src={image}
+                                                    alt={`${project.title} - ${
+                                                      index + 1
+                                                    }`}
+                                                    className="w-full h-full object-cover absolute inset-0"
+                                                  />
+                                                  <div className="absolute top-2 right-2 bg-black/50 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                                                    <Expand className="h-4 w-4 text-white" />
+                                                  </div>
+                                                </>
+                                              ) : (
+                                                <div className="text-white text-center">
+                                                  <div className="text-6xl font-bold mb-2">
+                                                    FM
+                                                  </div>
+                                                  <div className="text-lg opacity-90">
+                                                    {project.title}
+                                                  </div>
+                                                </div>
+                                              )}
+                                            </div>
+                                          </DialogTrigger>
+                                          <DialogContent
+                                            className="!max-w-[95vw] !w-[95vw] sm:!max-w-[60vw] sm:!w-[60vw] max-h-[95vh] p-2"
+                                            aria-describedby={undefined}
+                                          >
+                                            <DialogTitle className="sr-only">
+                                              Imagem {index + 1} do projeto{" "}
+                                              {project.title}
+                                            </DialogTitle>
+                                            <img
+                                              src={image}
+                                              alt={`${project.title} - ${
+                                                index + 1
+                                              }`}
+                                              className="w-full h-full object-contain rounded-lg"
+                                            />
+                                          </DialogContent>
+                                        </Dialog>
+                                      </CarouselItem>
+                                    ))}
+                                  </CarouselContent>
+                                  <CarouselPrevious />
+                                  <CarouselNext />
+                                </Carousel>
+                              </div>
                               <div className="flex gap-2 pt-4">
-                                {project.site && (
-                                  <Button asChild variant="default" size="sm">
-                                    <a
-                                      href={project.site}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                    >
-                                      <ExternalLink className="h-4 w-4 mr-2" />
-                                      Acessar Projeto
-                                    </a>
-                                  </Button>
-                                )}
                                 {project.github && (
                                   <Button asChild variant="outline" size="sm">
                                     <a
@@ -243,19 +329,43 @@ export const Home = () => {
                                     </a>
                                   </Button>
                                 )}
+                                {project.site && (
+                                  <Button asChild variant="default" size="sm">
+                                    <a
+                                      href={project.site}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                    >
+                                      <Globe className="h-4 w-4 mr-2" />
+                                      Acessar Projeto
+                                    </a>
+                                  </Button>
+                                )}
                               </div>
                             </div>
                           </DialogContent>
                         </Dialog>
+                        {project.github && (
+                          <Button asChild size="icon" variant="outline">
+                            <a
+                              href={project.github}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              title="Código"
+                            >
+                              <Github className="h-4 w-4" />
+                            </a>
+                          </Button>
+                        )}
                         {project.site && (
-                          <Button asChild size="sm" className="flex-1">
+                          <Button asChild size="icon">
                             <a
                               href={project.site}
                               target="_blank"
                               rel="noopener noreferrer"
+                              title="Acessar Projeto"
                             >
-                              <ExternalLink className="h-4 w-4 mr-2" />
-                              Acessar
+                              <Globe className="h-4 w-4" />
                             </a>
                           </Button>
                         )}
