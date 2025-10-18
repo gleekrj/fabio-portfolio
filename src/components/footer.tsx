@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import logoFabiomatos from "@/assets/logo_fabiomatos.png";
 import logoFabiomatosDark from "@/assets/logo_fabiomatos_dark.png";
-import { useTheme } from "@/components/theme-provider";
+import { useTheme } from "@/hooks/useTheme";
 
 export const Footer = () => {
   const { theme } = useTheme();
