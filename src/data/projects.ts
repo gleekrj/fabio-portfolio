@@ -18,13 +18,13 @@ export const projects: Project[] = [
         site: "https://game-hub2-omega.vercel.app/",
         github: "https://github.com/gleekrj/game-hub2",
         images: [
-            "https://res.cloudinary.com/diun304co/image/upload/v1760651133/game_hub/images/GameHub_01_yfprvy.png",
-            "https://res.cloudinary.com/diun304co/image/upload/v1760651133/game_hub/images/GameHub_02_srvvtn.png",
-            "https://res.cloudinary.com/diun304co/image/upload/v1760651133/game_hub/images/GameHub_03_mmdlrb.png",
-            "https://res.cloudinary.com/diun304co/image/upload/v1760651133/game_hub/images/GameHub_04_jrpvik.png",
-            "https://res.cloudinary.com/diun304co/image/upload/v1760651133/game_hub/images/GameHub_05_uys7fy.png"
+            "https://res.cloudinary.com/diun304co/image/upload/v1760651133/portfolio/images/GameHub_01_yfprvy.png",
+            "https://res.cloudinary.com/diun304co/image/upload/v1760651133/portfolio/images/GameHub_02_srvvtn.png",
+            "https://res.cloudinary.com/diun304co/image/upload/v1760651133/portfolio/images/GameHub_03_mmdlrb.png",
+            "https://res.cloudinary.com/diun304co/image/upload/v1760651133/portfolio/images/GameHub_04_jrpvik.png",
+            "https://res.cloudinary.com/diun304co/image/upload/v1760651133/portfolio/images/GameHub_05_uys7fy.png"
         ],
-        videoUrl: "https://res.cloudinary.com/diun304co/video/upload/v1760651199/game_hub/videos/GameHub_Video_klg9w6.mp4",
+        videoUrl: "https://res.cloudinary.com/diun304co/video/upload/v1760651199/portfolio/videos/GameHub_Video_klg9w6.mp4",
         launchDate: "Julho 2025",
         technologies: ["React.js 18", "TypeScript", "React Query", "Chakra UI", "rawg.io API"]
     },
@@ -34,14 +34,14 @@ export const projects: Project[] = [
         description: "Problema: Pequenos negócios precisam de plataformas de e-commerce funcionais e escaláveis sem depender de soluções prontas limitadas. Solução: Desenvolvi do zero um e-commerce com Next.js e TypeScript, incluindo catálogo de produtos, carrinho de compras, autenticação obrigatória e integração com Stripe para pagamentos. Usei Drizzle ORM para persistência, Zod para validações e Shadcn/ui para interface reutilizável. Resultado: Aplicação escalável, responsiva e otimizada para mobile, pronta para uso real e adaptável às necessidades específicas do cliente.",
         site: "https://bewear-wheat.vercel.app",
         github: "https://github.com/gleekrj/bewear",
-        images: ["https://res.cloudinary.com/diun304co/image/upload/v1760726284/bewear/images/bewear_01_mevnsc.png",
-            "https://res.cloudinary.com/diun304co/image/upload/v1760726283/bewear/images/bewear_02_uqngyg.png",
-            "https://res.cloudinary.com/diun304co/image/upload/v1760726282/bewear/images/bewear_03_art0rr.png",
-            "https://res.cloudinary.com/diun304co/image/upload/v1760726286/bewear/images/bewear_04_z5ov7k.png",
-            "https://res.cloudinary.com/diun304co/image/upload/v1760726285/bewear/images/bewear_05_ovjpel.png",
-            "https://res.cloudinary.com/diun304co/image/upload/v1760726283/bewear/images/bewear_06_lw3d7z.png"
+        images: ["https://res.cloudinary.com/diun304co/image/upload/v1760726284/portfolio/images/bewear_01_mevnsc.png",
+            "https://res.cloudinary.com/diun304co/image/upload/v1760726283/portfolio/images/bewear_02_uqngyg.png",
+            "https://res.cloudinary.com/diun304co/image/upload/v1760726282/portfolio/images/bewear_03_art0rr.png",
+            "https://res.cloudinary.com/diun304co/image/upload/v1760726286/portfolio/images/bewear_04_z5ov7k.png",
+            "https://res.cloudinary.com/diun304co/image/upload/v1760726285/portfolio/images/bewear_05_ovjpel.png",
+            "https://res.cloudinary.com/diun304co/image/upload/v1760726283/portfolio/images/bewear_06_lw3d7z.png"
         ],
-        videoUrl: "https://res.cloudinary.com/diun304co/video/upload/v1760725674/bewear/videos/walkthrough_bewear_cqm1bf.mp4",
+        videoUrl: "https://res.cloudinary.com/diun304co/video/upload/v1760725674/portfolio/videos/walkthrough_bewear_cqm1bf.mp4",
         launchDate: "Setembro 2025",
         technologies: ["Next.js", "TypeScript", "Drizzle ORM", "Shadcn/ui", "Zod", "Stripe", "React", "Node.js", "Tailwind CSS", "ESLint", "Vercel"]
     },
@@ -51,7 +51,14 @@ export const projects: Project[] = [
         description: "Problema: Profissionais de tecnologia precisam de uma presença digital que demonstre competência técnica e seja fácil de navegar. Solução: Desenvolvi um portfólio completo em React com TypeScript, React Router para navegação, Framer Motion para animações e Tailwind CSS para estilização moderna. O site apresenta projetos detalhados, seção de habilidades técnicas e formulário de contato. Resultado: Plataforma profissional totalmente responsiva, com navegação intuitiva e carregamento otimizado, servindo como vitrine efetiva para clientes e recrutadores.",
         site: "https://fabio-portfolio-kappa.vercel.app/",
         github: "https://github.com/gleekrj/fabio-portfolio",
-        images: ["/project-portfolio.jpg"],
+        images: ["https://res.cloudinary.com/diun304co/image/upload/v1760887069/portfolio/images/Portfolio_01_lalzlg.png",
+            "https://res.cloudinary.com/diun304co/image/upload/v1760887071/portfolio/images/Portfolio_02_w9yzbx.png",
+            "https://res.cloudinary.com/diun304co/image/upload/v1760887075/portfolio/images/Portfolio_03_yokuvc.png",
+            "https://res.cloudinary.com/diun304co/image/upload/v1760887078/portfolio/images/Portfolio_04_eqqoso.png",
+            "https://res.cloudinary.com/diun304co/image/upload/v1760887081/portfolio/images/Portfolio_05_ccvjyr.png",
+            "https://res.cloudinary.com/diun304co/image/upload/v1760887086/portfolio/images/Portfolio_06_flyzcz.png"
+        ],
+        videoUrl: "https://res.cloudinary.com/diun304co/video/upload/v1760887101/portfolio/videos/Portfolio_FabioMatos_gdee7e.mp4",
         launchDate: "Outubro 2025",
         technologies: ["React", "React Router", "TypeScript", "Node.js", "Tailwind CSS", "Vite", "Framer Motion", "Cloudinary", "Vercel"]
     }
