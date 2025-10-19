@@ -6,11 +6,13 @@ import { Resume } from "@/pages/resume";
 import { About } from "@/pages/about";
 import { Contact } from "@/pages/contact";
 import { Toaster } from "@/components/ui/sonner";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 function App() {
   return (
     <ThemeProvider>
       <Router>
+        <ScrollToTop />
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
