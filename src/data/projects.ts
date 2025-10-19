@@ -18,13 +18,13 @@ export const projects: Project[] = [
         site: "https://game-hub2-omega.vercel.app/",
         github: "https://github.com/gleekrj/game-hub2",
         images: [
-            "https://res.cloudinary.com/diun304co/image/upload/v1760651133/portfolio/images/GameHub_01_yfprvy.png",
-            "https://res.cloudinary.com/diun304co/image/upload/v1760651133/portfolio/images/GameHub_02_srvvtn.png",
-            "https://res.cloudinary.com/diun304co/image/upload/v1760651133/portfolio/images/GameHub_03_mmdlrb.png",
-            "https://res.cloudinary.com/diun304co/image/upload/v1760651133/portfolio/images/GameHub_04_jrpvik.png",
-            "https://res.cloudinary.com/diun304co/image/upload/v1760651133/portfolio/images/GameHub_05_uys7fy.png"
+            "https://res.cloudinary.com/diun304co/image/upload/v1760651133/game_hub/images/GameHub_01_yfprvy.png",
+            "https://res.cloudinary.com/diun304co/image/upload/v1760651133/game_hub/images/GameHub_02_srvvtn.png",
+            "https://res.cloudinary.com/diun304co/image/upload/v1760651133/game_hub/images/GameHub_03_mmdlrb.png",
+            "https://res.cloudinary.com/diun304co/image/upload/v1760651133/game_hub/images/GameHub_04_jrpvik.png",
+            "https://res.cloudinary.com/diun304co/image/upload/v1760651133/game_hub/images/GameHub_05_uys7fy.png"
         ],
-        videoUrl: "https://res.cloudinary.com/diun304co/video/upload/v1760651199/portfolio/videos/GameHub_Video_klg9w6.mp4",
+        videoUrl: "https://res.cloudinary.com/diun304co/video/upload/v1760651199/game_hub/videos/GameHub_Video_klg9w6.mp4",
         launchDate: "Julho 2025",
         technologies: ["React.js 18", "TypeScript", "React Query", "Chakra UI", "rawg.io API"]
     },
@@ -46,13 +46,13 @@ export const projects: Project[] = [
         technologies: ["Next.js", "TypeScript", "Drizzle ORM", "Shadcn/ui", "Zod", "Stripe", "React", "Node.js", "Tailwind CSS", "ESLint", "Vercel"]
     },
     {
-        title: "Portfólio Pessoal",
-        summary: "Portfólio profissional desenvolvido com React 19 e TypeScript",
-        description: "Portfólio pessoal moderno e responsivo desenvolvido com as mais recentes tecnologias web. Inclui animações fluidas, tema escuro/claro, design responsivo e otimizações de performance. Demonstra habilidades em React 19, TypeScript, Tailwind CSS e Framer Motion.",
-        site: "https://fabio-portfolio.vercel.app",
-        github: "https://github.com/fabio-matos/portfolio",
+        title: "Portfólio Pessoal de Fábio Matos",
+        summary: "Um portfólio moderno e responsivo, projetado para apresentar meus projetos, habilidades e experiências como desenvolvedor, com foco em clareza, usabilidade e estética profissional.",
+        description: "Este portfólio foi desenvolvido como uma vitrine do meu trabalho e aprendizado em desenvolvimento web. Ele apresenta projetos detalhados, descrevendo tecnologias utilizadas, desafios superados e soluções implementadas. A interface é intuitiva, responsiva e otimizada para diferentes dispositivos, garantindo que visitantes possam navegar facilmente e conhecer meu perfil profissional de forma completa. Além disso, o portfólio serve como uma demonstração prática das minhas habilidades em frontend, backend e integração de APIs.",
+        site: "https://fabio-portfolio-kappa.vercel.app/",
+        github: "https://github.com/gleekrj/fabio-portfolio",
         images: ["/project-portfolio.jpg"],
-        launchDate: "Janeiro 2025",
-        technologies: ["React 19", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"]
+        launchDate: "Outubro 2025",
+        technologies: ["React", "React Router", "TypeScript", "Node.js", "Tailwind CSS", "Vite", "Framer Motion", "Cloudinary", "Vercel"]
     }
 ];
