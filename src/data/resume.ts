@@ -36,32 +36,34 @@ export interface ResumeData {
 }
 
 export const resumeData: ResumeData = {
-    title: "Desenvolvedor Fullstack, transformando ideias em soluções — do Rio de Janeiro para o mundo.",
+    title: "Desenvolvedor Fullstack — Entregando soluções práticas e escaláveis para freelas e empresas.",
     summary: [
         [
-            { text: "Desenvolvedor Fullstack Júnior com experiência prática em " },
+            { text: "Desenvolvedor Fullstack com experiência prática em " },
             { text: "React.js, Node.js, React Native e Java", bold: true },
-            { text: ", atuando em projetos voluntários e pessoais que envolvem " },
+            { text: ", entregando projetos completos que incluem " },
             { text: "interfaces responsivas, APIs REST e integrações entre front e backend", bold: true },
             { text: "." }
         ],
         [
             { text: "Com mais de " },
-            { text: "15 anos de vivência em projetos de TI e times ágeis", bold: true },
-            { text: ", trago uma base sólida em " },
-            { text: "análise de sistemas, comunicação técnica e entrega de valor", bold: true },
-            { text: ", aliando experiência corporativa à prática de desenvolvimento." }
+            { text: "15 anos de experiência em TI", bold: true },
+            { text: ", incluindo análise de sistemas, gestão ágil e trabalho direto com times de desenvolvimento, combino " },
+            { text: "visão de produto com execução técnica", bold: true },
+            { text: " para entregar valor real." }
         ],
         [
-            { text: "Tenho facilidade em aprender novas tecnologias, aplicar " },
+            { text: "Aprendo rápido, aplico " },
             { text: "boas práticas de código", bold: true },
-            { text: ", trabalhar em equipe e buscar " },
-            { text: "soluções simples, funcionais e escaláveis", bold: true },
+            { text: " e busco sempre " },
+            { text: "soluções simples, eficazes e escaláveis", bold: true },
+            { text: ". " },
+            { text: "Disponível para projetos freelance e oportunidades fixas", bold: true },
             { text: "." }
         ],
         [
-            { text: "Inglês fluente", bold: true },
-            { text: "." }
+            { text: "Inglês fluente (B2)", bold: true },
+            { text: " — Rio de Janeiro, Brasil." }
         ]
     ],
     skills: {

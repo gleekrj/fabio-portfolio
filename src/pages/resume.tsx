@@ -46,6 +46,16 @@ export const Resume = () => {
               <MapPin className="h-5 w-5 mr-2" />
               <span>Rio de Janeiro, Brasil</span>
             </div>
+            <div className="max-w-3xl mx-auto bg-orange-50 dark:bg-orange-900/20 border-l-4 border-orange-500 p-6 rounded-r-lg">
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                <strong className="text-orange-600 dark:text-orange-400">
+                  Profissional com 15 anos de experiência em TI
+                </strong>
+                , especializado em análise de sistemas e desenvolvedor full
+                stack. Combino visão estratégica com execução técnica para
+                entregar soluções que funcionam.
+              </p>
+            </div>
           </motion.div>
 
           {/* Summary */}
@@ -249,19 +259,39 @@ export const Resume = () => {
                 </div>
               </CardContent>
             </Card>
-            <div className="flex justify-center mt-8">
-              <Button
-                asChild
-                className="bg-orange-500 hover:bg-orange-600 text-white"
-              >
-                <a
-                  href="http://github.com/gleekrj/portfolio-files/raw/main/FabioMatos_Curriculo.pdf"
-                  download
+            <div className="flex flex-col items-center gap-4 mt-8">
+              <p className="text-center text-gray-600 dark:text-gray-300">
+                Confira meu currículo completo ou conecte-se comigo no LinkedIn
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-orange-500 hover:bg-orange-600 text-white"
                 >
-                  <Download className="h-4 w-4 mr-2" />
-                  Baixar CV
-                </a>
-              </Button>
+                  <a
+                    href="http://github.com/gleekrj/portfolio-files/raw/main/FabioMatos_Curriculo.pdf"
+                    download
+                  >
+                    <Download className="h-5 w-5 mr-2" />
+                    Baixar CV
+                  </a>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="border-orange-500 text-orange-500 hover:bg-orange-50 dark:hover:bg-orange-900/20"
+                >
+                  <a
+                    href="https://www.linkedin.com/in/fabio-matos/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn
+                  </a>
+                </Button>
+              </div>
             </div>
           </motion.div>
         </motion.div>

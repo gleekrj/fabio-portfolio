@@ -15,9 +15,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Globe, Github, Calendar, Play, Expand } from "lucide-react";
+import { Globe, Github, Calendar, Play, Expand, Send } from "lucide-react";
 import { technologies } from "@/data/technologies";
 import { projects } from "@/data/projects";
+import { Services } from "@/components/Services";
+import { Link } from "react-router-dom";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -57,36 +59,47 @@ export const Home = () => {
                 Fábio Matos
               </span>
             </h1>
-            <p className="text-2xl sm:text-3xl font-semibold text-gray-700 dark:text-gray-200 max-w-3xl mx-auto leading-relaxed">
-              Depois de 15 anos traduzindo necessidades em soluções, encontrei
-              na
+            <p className="text-2xl sm:text-3xl font-semibold text-gray-700 dark:text-gray-200 max-w-3xl mx-auto leading-relaxed mb-8">
+              Transformo ideias em aplicações{" "}
               <span className="text-orange-500 dark:text-orange-400">
-                {" "}
-                programação{" "}
-              </span>
-              a forma mais direta de
-              <span className="text-orange-500 dark:text-orange-400">
-                {" "}
-                construir{" "}
-              </span>
-              o que antes eu apenas descrevia — com
-              <span className="text-orange-500 dark:text-orange-400">
-                {" "}
-                propósito{" "}
-              </span>
-              e sem complicar o que pode ser
-              <span className="text-orange-500 dark:text-orange-400">
-                {" "}
-                simples
-              </span>
-              .
+                simples, funcionais
+              </span>{" "}
+              e prontas para o mercado
             </p>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
+              Com 15 anos de experiência em análise de sistemas e foco em
+              desenvolvimento full stack, entrego soluções completas que
+              resolvem problemas reais.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button
+                asChild
+                size="lg"
+                className="bg-orange-500 hover:bg-orange-600 text-white text-lg px-8"
+              >
+                <Link to="/contact">
+                  <Send className="h-5 w-5 mr-2" />
+                  Peça um Orçamento
+                </Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="text-lg px-8"
+              >
+                <a href="#projects">Ver Projetos</a>
+              </Button>
+            </div>
           </motion.div>
         </div>
       </section>
 
+      {/* Services Section */}
+      <Services />
+
       {/* Technologies Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial="hidden"
@@ -122,7 +135,10 @@ export const Home = () => {
       </section>
 
       {/* Projects Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section
+        id="projects"
+        className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800"
+      >
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial="hidden"
@@ -130,12 +146,15 @@ export const Home = () => {
             viewport={{ once: true }}
             variants={containerVariants}
           >
-            <motion.h2
-              variants={itemVariants}
-              className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12"
-            >
-              Projetos
-            </motion.h2>
+            <motion.div variants={itemVariants} className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                Projetos Recentes
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Confira alguns dos projetos que desenvolvi, desde aplicações web
+                completas até integrações e soluções mobile.
+              </p>
+            </motion.div>
             <motion.div
               variants={containerVariants}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"

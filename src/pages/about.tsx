@@ -24,19 +24,15 @@ const itemVariants = {
 };
 
 export const About = () => {
-  const aboutText = `Meu nome é Fábio Matos, tenho 44 anos e sou desenvolvedor Fullstack. Moro aqui no Rio de Janeiro e estou em busca de oportunidades onde eu possa colocar em prática tudo que venho construindo nos últimos anos.
+  const aboutText = `Meu nome é Fábio Matos, sou desenvolvedor Fullstack e tenho 15 anos de experiência em TI. Nos últimos anos, fiz a transição de Analista de Sistemas para desenvolvedor, e hoje aplico toda essa bagagem em projetos práticos e bem estruturados.
 
-Minha trajetória em TI tem mais de 15 anos, mas confesso que passei a maior parte desse tempo "do outro lado da mesa" — fui Agile Master, Product Owner, Scrum Master e Analista de Requisitos em empresas como B3, Petrobras, TV Globo, Bradesco e outras. Trabalhei direto com times de desenvolvimento, ajudei a estruturar processos, facilitei entregas e aprendi muito sobre como software se constrói de verdade.
+Passei mais de uma década trabalhando como Agile Master, Product Owner e Analista de Requisitos em empresas como B3, Petrobras, TV Globo e Bradesco. Essa vivência me ensinou a traduzir necessidades em soluções reais, a entender o valor de uma boa entrega e a trabalhar bem com times de desenvolvimento. Eu sabia o que precisava ser construído — agora, sei como construir.
 
-Mas chegou um momento em que olhar o código sendo escrito não era mais suficiente. Eu queria escrever também. Então, em 2024, decidi mergulhar de cabeça no desenvolvimento. Comecei com React, Node.js e Java, fiz projetos voluntários pela Pipoca Ágil (um aplicativo de saúde em React Native e uma plataforma de turismo sustentável com React + TypeScript) e fui aprendendo na prática mesmo — fazendo, errando, refatorando, testando.
+Em 2024, decidi mergulhar no código. Comecei com React, Node.js e Java, e desde então tenho desenvolvido projetos voluntários e pessoais que envolvem desde landing pages até aplicativos mobile e APIs completas. Trabalho com React.js, Next.js, Node.js, TypeScript, Tailwind CSS, PostgreSQL, MySQL e React Native. Também tenho experiência com Git/GitHub, CI/CD, deploy em Vercel e Heroku, além de inglês fluente.
 
-Hoje trabalho com React.js, Next.js, Node.js, Express, TypeScript, Tailwind CSS e tenho uma base sólida em bancos relacionais (PostgreSQL, MySQL, SQL Server) e conceitos de MongoDB. Também conheço Java com Spring Boot no nível básico, uso Git/GitHub diariamente, já mexi com CI/CD (GitHub Actions e Jenkins) e faço deploy em Vercel e Heroku. Ah, e falo inglês fluente (B2), o que ajuda bastante na hora de ler documentação ou trocar ideia com a comunidade.
+O que me diferencia é a combinação única de visão técnica e visão de produto. Sei pensar no problema antes de pensar no código, entendo o impacto de cada decisão e consigo transitar bem entre negócio e desenvolvimento. Sou paciente, organizado e gosto de resolver problemas de forma simples e eficaz.
 
-O que me diferencia? Eu diria que é a combinação de visão técnica com visão de produto. Sei pensar no usuário final, entendo o valor de uma entrega bem feita e consigo transitar bem entre o time de negócio e o time de dev. Aprendo rápido, me adapto fácil a novos contextos e gosto de trabalhar em times colaborativos — aqueles onde todo mundo ajuda todo mundo.
-
-Estou procurando posições júnior em Fullstack, Frontend ou Backend. Sei que ainda tenho muito a aprender, mas também sei que trago uma bagagem diferente, que pode agregar bastante ao time. Tenho consciência de que a senioridade técnica vem com tempo e prática, mas posso garantir comprometimento, vontade de crescer e uma entrega consistente desde o primeiro dia.
-
-Se você está montando um time que valoriza pessoas que aprendem rápido, que se comunicam bem e que topam encarar desafios, acho que a gente pode se dar muito bem.`;
+Estou disponível para projetos freelance e oportunidades fixas. Se você precisa de um desenvolvedor que entende não só de código, mas também de contexto, que se comunica bem e que entrega com consistência, vamos conversar.`;
 
   return (
     <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8">

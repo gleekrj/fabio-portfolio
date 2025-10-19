@@ -61,8 +61,13 @@ export const Contact = () => {
             <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Entre em Contato
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
-              Vamos conversar sobre oportunidades e projetos interessantes!
+            <p className="text-2xl font-semibold text-orange-500 dark:text-orange-400 mb-4">
+              Precisa de um desenvolvedor confiável para seu projeto?
+            </p>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Estou disponível para freelas e oportunidades fixas. Vamos
+              conversar sobre como posso ajudar a transformar sua ideia em
+              realidade.
             </p>
           </motion.div>
 
@@ -107,31 +112,50 @@ export const Contact = () => {
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600">
+            <Card className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 border-orange-200 dark:border-orange-700">
               <CardHeader>
-                <CardTitle className="text-2xl text-gray-900 dark:text-white text-center">
+                <CardTitle className="text-3xl text-gray-900 dark:text-white text-center">
                   Vamos Trabalhar Juntos?
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-8">
-                <div className="text-center space-y-4">
-                  <p className="text-gray-600 dark:text-gray-300 text-lg">
-                    Estou sempre aberto a novas oportunidades e desafios. Se
-                    você tem um projeto interessante ou uma vaga que combine com
-                    meu perfil, não hesite em entrar em contato!
+                <div className="text-center space-y-6">
+                  <p className="text-gray-700 dark:text-gray-200 text-lg font-medium">
+                    Se você está procurando um desenvolvedor que entende de
+                    negócio, se comunica bem e entrega soluções práticas, chegou
+                    ao lugar certo.
                   </p>
-                  <div className="flex flex-col gap-4 items-center">
-                    <p className="text-2xl font-semibold text-orange-500 dark:text-orange-400">
+                  <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                    <p className="text-gray-600 dark:text-gray-300 mb-4">
+                      Entre em contato para:
+                    </p>
+                    <ul className="text-left text-gray-700 dark:text-gray-200 space-y-2 max-w-md mx-auto">
+                      <li className="flex items-start">
+                        <span className="text-orange-500 mr-2">✓</span>
+                        Solicitar um orçamento para seu projeto
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-orange-500 mr-2">✓</span>
+                        Discutir oportunidades de colaboração
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-orange-500 mr-2">✓</span>
+                        Esclarecer dúvidas sobre serviços
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="flex flex-col gap-4 items-center pt-4">
+                    <p className="text-2xl font-semibold text-orange-600 dark:text-orange-400">
                       fabio.henrique.ss.matos@gmail.com
                     </p>
                     <Button
                       asChild
                       size="lg"
-                      className="bg-orange-500 hover:bg-orange-600 text-white"
+                      className="bg-orange-500 hover:bg-orange-600 text-white text-lg px-8"
                     >
                       <a href="mailto:fabio.henrique.ss.matos@gmail.com">
                         <Send className="h-5 w-5 mr-2" />
-                        Enviar E-mail
+                        Fale Comigo Agora
                       </a>
                     </Button>
                   </div>

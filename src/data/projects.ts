@@ -13,8 +13,8 @@ export interface Project {
 export const projects: Project[] = [
     {
         title: "Game Hub - Hub de Jogos Interativo",
-        summary: "Frontend de um hub de jogos desenvolvido em React.js e TypeScript, permitindo filtrar jogos por plataforma e gênero, buscar títulos específicos e acessar detalhes como trailer, imagens, pontuação no Metacritic e indicação de 'vale a pena jogar'.",
-        description: "O Game Hub é um projeto frontend criado para organizar e exibir informações de jogos de forma intuitiva e dinâmica. Nele, o usuário pode filtrar jogos por plataforma e gênero, pesquisar títulos específicos e visualizar detalhes como trailer, imagens e pontuação no Metacritic, além de conferir um indicador visual que mostra se o jogo “vale a pena jogar”. O frontend foi desenvolvido com React.js 18 e TypeScript, utilizando hooks personalizados para facilitar a manutenção e React Query para gerenciar os dados obtidos da API do rawg.io. A interface foi construída com Chakra UI, garantindo um visual limpo e responsivo.",
+        summary: "Plataforma web que organiza e exibe informações de jogos com filtros inteligentes e interface moderna.",
+        description: "Problema: Gamers precisam de uma forma rápida e intuitiva de descobrir e avaliar jogos antes de comprar ou baixar. Solução: Desenvolvi um hub de jogos em React.js 18 e TypeScript que integra com a API do rawg.io, permitindo filtrar por plataforma e gênero, buscar títulos específicos e visualizar detalhes como trailer, imagens e pontuação no Metacritic. Resultado: Interface responsiva com Chakra UI, gerenciamento eficiente de dados com React Query e hooks personalizados, oferecendo uma experiência fluida e informativa para os usuários.",
         site: "https://game-hub2-omega.vercel.app/",
         github: "https://github.com/gleekrj/game-hub2",
         images: [
@@ -30,8 +30,8 @@ export const projects: Project[] = [
     },
     {
         title: "BEWEAR - E-commerce Moderno com Next.js",
-        summary: "Um e-commerce completo foi desenvolvido com autenticação, carrinho e integração com pagamentos via Stripe. O projeto foi construído com tecnologias modernas do ecossistema React e otimizado para mobile, priorizando escalabilidade e boas práticas de desenvolvimento.",
-        description: "O BEWEAR é um e-commerce desenvolvido do zero para demonstrar a construção de uma aplicação real e escalável com Next.js e TypeScript. A aplicação permite que o usuário explore produtos, adicione itens ao carrinho e realize compras utilizando o Stripe em modo de teste. Conta com autenticação obrigatória para concluir pedidos e validações de formulário feitas com Zod. O projeto utiliza Drizzle ORM para modelagem e persistência dos dados, Shadcn/ui para criação de componentes de interface reutilizáveis e foi otimizado para dispositivos móveis, garantindo uma experiência fluida e moderna.",
+        summary: "Loja virtual completa com carrinho, autenticação e pagamentos integrados via Stripe.",
+        description: "Problema: Pequenos negócios precisam de plataformas de e-commerce funcionais e escaláveis sem depender de soluções prontas limitadas. Solução: Desenvolvi do zero um e-commerce com Next.js e TypeScript, incluindo catálogo de produtos, carrinho de compras, autenticação obrigatória e integração com Stripe para pagamentos. Usei Drizzle ORM para persistência, Zod para validações e Shadcn/ui para interface reutilizável. Resultado: Aplicação escalável, responsiva e otimizada para mobile, pronta para uso real e adaptável às necessidades específicas do cliente.",
         site: "https://bewear-wheat.vercel.app",
         github: "https://github.com/gleekrj/bewear",
         images: ["https://res.cloudinary.com/diun304co/image/upload/v1760726284/bewear/images/bewear_01_mevnsc.png",
@@ -47,8 +47,8 @@ export const projects: Project[] = [
     },
     {
         title: "Portfólio Pessoal de Fábio Matos",
-        summary: "Um portfólio moderno e responsivo, projetado para apresentar meus projetos, habilidades e experiências como desenvolvedor, com foco em clareza, usabilidade e estética profissional.",
-        description: "Este portfólio foi desenvolvido como uma vitrine do meu trabalho e aprendizado em desenvolvimento web. Ele apresenta projetos detalhados, descrevendo tecnologias utilizadas, desafios superados e soluções implementadas. A interface é intuitiva, responsiva e otimizada para diferentes dispositivos, garantindo que visitantes possam navegar facilmente e conhecer meu perfil profissional de forma completa. Além disso, o portfólio serve como uma demonstração prática das minhas habilidades em frontend, backend e integração de APIs.",
+        summary: "Site profissional moderno e responsivo para apresentação de projetos e serviços.",
+        description: "Problema: Profissionais de tecnologia precisam de uma presença digital que demonstre competência técnica e seja fácil de navegar. Solução: Desenvolvi um portfólio completo em React com TypeScript, React Router para navegação, Framer Motion para animações e Tailwind CSS para estilização moderna. O site apresenta projetos detalhados, seção de habilidades técnicas e formulário de contato. Resultado: Plataforma profissional totalmente responsiva, com navegação intuitiva e carregamento otimizado, servindo como vitrine efetiva para clientes e recrutadores.",
         site: "https://fabio-portfolio-kappa.vercel.app/",
         github: "https://github.com/gleekrj/fabio-portfolio",
         images: ["/project-portfolio.jpg"],

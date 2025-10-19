@@ -71,7 +71,11 @@ export const Footer = () => {
               })}
             </div>
 
-            <div className="text-center md:text-right">
+            <div className="text-center md:text-right space-y-2">
+              <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                Aberto a freelas e oportunidades fixas — sempre com foco em
+                soluções simples e eficazes.
+              </p>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 Desenvolvido por{" "}
                 <a
