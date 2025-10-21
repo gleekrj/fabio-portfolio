@@ -145,7 +145,7 @@ export const Contact = () => {
                     </ul>
                   </div>
                   <div className="flex flex-col gap-4 items-center pt-4">
-                    <p className="text-2xl font-semibold text-orange-600 dark:text-orange-400">
+                    <p className="text-base sm:text-xl md:text-2xl font-semibold text-orange-600 dark:text-orange-400 break-all px-4">
                       fabio.henrique.ss.matos@gmail.com
                     </p>
                     <Button

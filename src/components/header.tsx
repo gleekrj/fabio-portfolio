@@ -29,15 +29,15 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md transition-all duration-300 h-16 ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md transition-all duration-300 h-12 ${
         isAtTop ? "lg:h-24" : "border-b border-gray-200 dark:border-gray-700"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
-        <div className="flex items-center justify-between lg:justify-around h-full">
+      <nav className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 h-full">
+        <div className="flex items-center justify-between lg:justify-around h-full gap-1">
           <Link
             to={navItems[0].path}
-            className={`font-medium transition-all duration-300 text-sm ${
+            className={`font-medium transition-all duration-300 text-xs whitespace-nowrap ${
               isAtTop ? "lg:text-xl" : ""
             } ${
               location.pathname === navItems[0].path
@@ -50,7 +50,7 @@ export const Header = () => {
 
           <Link
             to={navItems[1].path}
-            className={`font-medium transition-all duration-300 text-sm ${
+            className={`font-medium transition-all duration-300 text-xs whitespace-nowrap ${
               isAtTop ? "lg:text-xl" : ""
             } ${
               location.pathname === navItems[1].path
@@ -61,11 +61,11 @@ export const Header = () => {
             {navItems[1].name}
           </Link>
 
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center flex-shrink-0">
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className={`rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg transition-all duration-300 w-12 h-12 ${
+              className={`rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg transition-all duration-300 w-10 h-10 ${
                 isAtTop ? "lg:w-24 lg:h-24 lg:mt-2" : ""
               }`}
             >
@@ -75,7 +75,7 @@ export const Header = () => {
 
           <Link
             to={navItems[2].path}
-            className={`font-medium transition-all duration-300 text-sm ${
+            className={`font-medium transition-all duration-300 text-xs whitespace-nowrap ${
               isAtTop ? "lg:text-xl" : ""
             } ${
               location.pathname === navItems[2].path
@@ -86,10 +86,10 @@ export const Header = () => {
             {navItems[2].name}
           </Link>
 
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-1 sm:space-x-2">
             <Link
               to={navItems[3].path}
-              className={`font-medium transition-all duration-300 text-sm ${
+              className={`font-medium transition-all duration-300 text-xs whitespace-nowrap ${
                 isAtTop ? "lg:text-xl" : ""
               } ${
                 location.pathname === navItems[3].path
@@ -104,7 +104,7 @@ export const Header = () => {
               variant="ghost"
               size="sm"
               onClick={toggleTheme}
-              className={`p-0 transition-all duration-300 w-9 h-9 ${
+              className={`p-0 transition-all duration-300 w-8 h-8 lg:cursor-pointer ${
                 isAtTop ? "lg:w-12 lg:h-12" : ""
               }`}
             >
