@@ -62,9 +62,17 @@ export const Home = () => {
             <p className="text-2xl sm:text-3xl font-semibold text-gray-700 dark:text-gray-200 max-w-3xl mx-auto leading-relaxed mb-8">
               Transformo ideias em aplicações{" "}
               <span className="text-orange-500 dark:text-orange-400">
-                simples, funcionais
+                simples
+              </span>
+              ,{" "}
+              <span className="text-orange-500 dark:text-orange-400">
+                funcionais
               </span>{" "}
-              e prontas para o mercado
+              e{" "}
+              <span className="text-orange-500 dark:text-orange-400">
+                prontas{" "}
+              </span>
+              para o mercado
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
               Com 15 anos de experiência em análise de sistemas e foco em
@@ -115,14 +123,14 @@ export const Home = () => {
             </motion.h2>
             <motion.div
               variants={containerVariants}
-              className="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-4"
+              className="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-4"
             >
               {technologies.map((tech) => (
                 <motion.div key={tech.name} variants={itemVariants}>
-                  <Card className="h-20 flex flex-col items-center justify-center p-2 hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600">
-                    <CardContent className="flex flex-col items-center justify-center h-full p-0">
-                      <tech.icon className="h-6 w-6 text-orange-500 dark:text-orange-400 mb-1" />
-                      <span className="text-xs font-medium text-gray-700 dark:text-gray-300 text-center">
+                  <Card className="h-24 flex flex-col items-center justify-center p-3 hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600">
+                    <CardContent className="flex flex-col items-center justify-center h-full p-0 gap-1">
+                      <tech.icon className="h-8 w-8 text-orange-500 dark:text-orange-400" />
+                      <span className="text-xs font-medium text-gray-700 dark:text-gray-300 text-center leading-tight">
                         {tech.name}
                       </span>
                     </CardContent>
