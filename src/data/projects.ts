@@ -7,10 +7,11 @@ export interface Project {
     images: string[];
     videoUrl?: string;
     launchDate: string;
+    date: string;
     technologies: string[];
 }
 
-export const projects: Project[] = [
+const projectsData: Project[] = [
     {
         title: "Game Hub - Hub de Jogos Interativo",
         summary: "Plataforma web que organiza e exibe informações de jogos com filtros inteligentes e interface moderna.",
@@ -26,6 +27,7 @@ export const projects: Project[] = [
         ],
         videoUrl: "https://res.cloudinary.com/diun304co/video/upload/v1760651199/portfolio/videos/GameHub_Video_klg9w6.mp4",
         launchDate: "Julho 2025",
+        date: "11/07/2025",
         technologies: ["React.js 18", "TypeScript", "React Query", "Chakra UI", "rawg.io API"]
     },
     {
@@ -43,6 +45,7 @@ export const projects: Project[] = [
         ],
         videoUrl: "https://res.cloudinary.com/diun304co/video/upload/v1760725674/portfolio/videos/walkthrough_bewear_cqm1bf.mp4",
         launchDate: "Setembro 2025",
+        date: "20/09/2025",
         technologies: ["Next.js", "TypeScript", "Drizzle ORM", "Shadcn/ui", "Zod", "Stripe", "React", "Node.js", "Tailwind CSS", "ESLint", "Vercel"]
     },
     {
@@ -60,6 +63,34 @@ export const projects: Project[] = [
         ],
         videoUrl: "https://res.cloudinary.com/diun304co/video/upload/v1760887101/portfolio/videos/Portfolio_FabioMatos_gdee7e.mp4",
         launchDate: "Outubro 2025",
+        date: "07/10/2025",
         technologies: ["React", "React Router", "TypeScript", "Node.js", "Tailwind CSS", "Vite", "Framer Motion", "Cloudinary", "Vercel"]
+    },
+    {
+        title: "Desafio GDash - Climate Data System",
+        summary: "Sistema completo de coleta, processamento e visualização de dados climáticos, com pipelines automatizados e APIs REST integradas.",
+        description: "Problema: Profissionais de tecnologia precisam de uma presença digital que demonstre competência técnica e seja fácil de navegar. Solução: Desenvolvi um portfólio completo em React com TypeScript, React Router para navegação, Framer Motion para animações e Tailwind CSS para estilização moderna. O site apresenta projetos detalhados, seção de habilidades técnicas e formulário de contato. Resultado: Plataforma profissional totalmente responsiva, com navegação intuitiva e carregamento otimizado, servindo como vitrine efetiva para clientes e recrutadores.",
+        site: "https://desafio-gdash-2025-frontend-production.up.railway.app/",
+        github: "https://github.com/gleekrj/desafio-gdash-2025",
+        images: ["https://res.cloudinary.com/diun304co/image/upload/v1765546907/portfolio/images/Desafio_GDash_1_tesslx.png",
+            "https://res.cloudinary.com/diun304co/image/upload/v1765546907/portfolio/images/Desafio_GDash_2_bystys.png",
+            "https://res.cloudinary.com/diun304co/image/upload/v1765546907/portfolio/images/Desafio_GDash_3_i7tmw5.jpg",
+            "https://res.cloudinary.com/diun304co/image/upload/v1765546908/portfolio/images/Desafio_GDash_4_boqid8.png",
+            "https://res.cloudinary.com/diun304co/image/upload/v1765546907/portfolio/images/Desafio_GDash_5_mblvqa.png",
+            "https://res.cloudinary.com/diun304co/image/upload/v1765546907/portfolio/images/Desafio_GDash_6_ckszgt.png"
+        ],
+        launchDate: "Novembro 2025",
+        date: "28/11/2025",
+        technologies: ["React", "Vite", "TypeScript", "NestJS", "Node.js", "Python", "Go", "Docker", "Docker Compose", "MongoDB", "RabbitMQ", "Swagger", "Tailwind CSS", "ESLint"]
     }
 ];
+
+export const projects: Project[] = projectsData.sort((a, b) => {
+    const [dayA, monthA, yearA] = a.date.split('/').map(Number);
+    const [dayB, monthB, yearB] = b.date.split('/').map(Number);
+
+    const dateA = new Date(yearA, monthA - 1, dayA);
+    const dateB = new Date(yearB, monthB - 1, dayB);
+
+    return dateB.getTime() - dateA.getTime();
+});
